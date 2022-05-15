@@ -1,14 +1,16 @@
+import React from 'react';
+import { Grid } from '@mui/material';
 import './App.css';
+import NavBar from './components/NavBar.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          ropapp web proximamente
-        </p>
-      </header>
-    </div>
+    <Grid className="App">
+      <NavBar></NavBar>
+      <p>
+        cuerpo del sitio
+      </p>
+    </Grid>
   );
 }
 
