@@ -14,20 +14,6 @@ li:hover{
 .App {
   text-align: center;
 }
-
-.navBar{
-  display: flex;
-  margin: 0px;
-  padding: 0px;
-  height: 80px;
-  top: 50%;
-  background-color: #282c34;
-  color: white;
-  font-size: calc(10px + 2vmin);
-  justify-content: space-between;
-
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -43,11 +29,19 @@ li:hover{
   color: #61dafb;
 }
 
+#navBar{
+  display: flex;
+  background-color: #282c34;
+  /*color: white;*/
+  justify-content: space-around;
+
+}
+
 #titleBrand{
   margin-left: 80px;
   padding: 0px;
-  width: 1fr;
   font-family: 'Segoe UI';
+  justify-self: left;
 
 }
 
@@ -55,9 +49,10 @@ li:hover{
   display: flex;
   margin-right: 80px;
   padding: 0px;
-  width: 1fr;
   font-family: 'Segoe UI';
 }
+
+
 
 
 /*

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import ItemListContainer from './ItemListContainer';
+import { Grid, AppBar } from '@mui/material';
 
 const NavBar = () => {
 
   return (
-    <Grid className='navBar'>
-      <Grid>
-      <p id='titleBrand'>
-        ROPAPP
-      </p>
-      </Grid>
-      <Grid>
+    <AppBar>
+      <Grid id='navBar'>
+        <p id='titleBrand'>
+          ROPAPP
+        </p>
+        
         <ul id='menuNavBar'>
           <li>home</li>
           <li>shop</li>
@@ -18,8 +18,10 @@ const NavBar = () => {
           <li>women</li>
           <li>search</li>
         </ul>
+
+        <ItemListContainer />
       </Grid>
-    </Grid>
+    </AppBar>
   );
 };
 
