@@ -1,12 +1,19 @@
 import React from "react";
+import { Grid } from '@mui/material';
+import ItemCount from './ItemCount.js';
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
 
   return (
-    <p>
-      LISTA CONTENEDORA DE ITEMS
-    </p>
+    <Grid id='itemListContainer'>
+      <p>
+        {greeting}
+      </p>
+      <br />
+      <ItemCount stock={8} initial={0}/>
+
+    </Grid>
   );
 };
   

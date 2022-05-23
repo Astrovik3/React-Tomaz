@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemListContainer from './ItemListContainer';
+import CartWidget from './CartWidget';
 import { Grid, AppBar } from '@mui/material';
 
 const NavBar = () => {
@@ -19,7 +19,10 @@ const NavBar = () => {
           <li>search</li>
         </ul>
 
-        <ItemListContainer />
+        <Grid id='cartWidget'>
+          <CartWidget />
+        </Grid>
+
       </Grid>
     </AppBar>
   );

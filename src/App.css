@@ -9,6 +9,18 @@ li{
 }
 li:hover{
   background-color: #384766;
+  cursor: pointer;
+}
+
+#cartWidget{
+  display:flex;
+  width: 40px;
+  top: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#cartWidget:hover{
+  cursor: pointer;
 }
 
 .App {
@@ -38,10 +50,13 @@ li:hover{
 }
 
 #titleBrand{
+  display: flex;
   margin-left: 80px;
   padding: 0px;
+  top: 50%;
   font-family: 'Segoe UI';
   justify-self: left;
+  align-items: center;
 
 }
 
@@ -52,6 +67,11 @@ li:hover{
   font-family: 'Segoe UI';
 }
 
+#itemListContainer{
+  display: flex;
+  margin-top: 70px;
+  padding: 0px;
+}
 
 
 
