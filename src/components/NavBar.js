@@ -1,6 +1,6 @@
 import React from 'react';
-import CartWidget from './CartWidget';
 import { Grid, AppBar } from '@mui/material';
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
 

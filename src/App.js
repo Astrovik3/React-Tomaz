@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import './App.css';
-import NavBar from './components/NavBar.js';
+import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 
 function App() {
