@@ -1,25 +1,28 @@
 import React, { useState } from "react";
 import { Grid, Button } from "@mui/material";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
-const ItemCount = () => {
-  const [quantity, setQuantity] = useState(0);
+const ItemCount = ({stock, initial}) => {
+  const [quantity, setQuantity] = useState(1);
 
   const restar = () => {
-    if(quantity > 0) {
+    if(quantity > initial) {
       setQuantity(quantity - 1);
     }
   }
   const sumar = () => {
-    if(quantity < 8) {
+    if(quantity < stock) {
       setQuantity(quantity + 1);
     }
   }
 
   return (
-    <Grid>
-      <Button variant="outlined" onClick={restar}>RESTAR</Button>
+    <Grid id='bttnsCantidad'>
+      <RemoveIcon class='addRemoveIcon' onClick={restar} />
       <p id="itemCountQuantity">{quantity}</p>
-      <Button variant="outlined" onClick={sumar}>SUMAR</Button>
+      <AddIcon class='addRemoveIcon' onClick={sumar} />
+      <Button id='bttnAgregar' variant="outlined" size="small">agregar al carrito</Button>
     </Grid>
   );
 };

@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 const Item = ({ids, name, price, photo}) => {
   
   return (
-    <Grid>
+    <Grid id='itemSolo'>
       <p>{ids}</p>
       <p>{name}</p>
       <p>{price}</p>

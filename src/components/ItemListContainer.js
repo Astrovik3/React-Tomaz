@@ -15,7 +15,6 @@ const ItemListContainer = ({greeting}) => {
       .catch(err => console.log(err))
   }, []);
 
-
   return (
     <Grid id='itemListContainer'>
       <p>

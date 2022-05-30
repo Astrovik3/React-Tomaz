@@ -12,6 +12,27 @@ li:hover{
   cursor: pointer;
 }
 
+.addRemoveIcon{
+  display: flex;
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(224, 223, 223);
+  align-self: center;
+  border-radius: 6px;
+  border: 1px solid rgb(85, 85, 85);
+
+}
+
+.addRemoveIcon:active{
+  background-color: rgb(210, 161, 223);
+}
+
+#bttnAgregar{
+  display: flex;
+  margin-left: 10px;
+}
+
 #cartWidget{
   display:flex;
   width: 40px;
@@ -25,6 +46,7 @@ li:hover{
 
 .App {
   text-align: center;
+  background-color: #f2f2f2;
 }
 .App-header {
   background-color: #282c34;
@@ -68,12 +90,37 @@ li:hover{
 }
 
 #itemListContainer{
-  
-  margin-top: 70px;
+  margin-top: 80px;
   padding: 0px;
 }
 
+#gridProductos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: sandybrown;
 
+}
+
+/*#itemSolo{
+  
+}*/
+
+#bttnsCantidad{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+#itemCountQuantity{
+  width: 50px;
+}
+
+#gridProductoSolo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 80px;
+
+}
 
 /*
 @media (prefers-reduced-motion: no-preference) {

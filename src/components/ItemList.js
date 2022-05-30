@@ -7,12 +7,12 @@ import Item from "./Item";
 const ItemList = ({items}) => {
 
   return (
-    <Grid>
+    <Grid id='gridProductos'>
       {
         items.length > 0
         ? items.map(item => <Item ids={item.ids} name={item.name} price={item.price} photo={item.photo}/> )
         : <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-            <CircularProgress />
+            <CircularProgress color='secondary' />
           </Box>
       }
     </Grid>

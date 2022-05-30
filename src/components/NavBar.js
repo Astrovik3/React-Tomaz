@@ -13,9 +13,9 @@ const NavBar = () => {
         
         <ul id='menuNavBar'>
           <li>home</li>
-          <li>shop</li>
           <li>men</li>
           <li>women</li>
+          <li>accessories</li>
           <li>search</li>
         </ul>
 
