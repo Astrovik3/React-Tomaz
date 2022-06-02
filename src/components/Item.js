@@ -8,7 +8,7 @@ const Item = ({ids, name, price, photo}) => {
       <p>{ids}</p>
       <p>{name}</p>
       <p>{price}</p>
-      <img src={photo} alt="si"></img>
+      <img id="fotoSola" src={photo} alt="si"></img>
 
     </Grid>
   );

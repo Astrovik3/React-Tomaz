@@ -6,6 +6,7 @@ li{
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  color: white;
 }
 li:hover{
   background-color: #384766;
@@ -26,6 +27,11 @@ li:hover{
 
 .addRemoveIcon:active{
   background-color: rgb(210, 161, 223);
+}
+
+.links{
+  text-decoration: none;
+  color: white;
 }
 
 #bttnAgregar{
@@ -97,13 +103,17 @@ li:hover{
 #gridProductos{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: sandybrown;
 
 }
 
 /*#itemSolo{
   
 }*/
+
+#fotoSola{
+  border: solid 1px black;
+  box-shadow: 2px 5px 8px rgb(131, 131, 131);
+}
 
 #bttnsCantidad{
   display: flex;
@@ -121,6 +131,14 @@ li:hover{
   margin-top: 80px;
 
 }
+
+#portadaWomen{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
 
 /*
 @media (prefers-reduced-motion: no-preference) {

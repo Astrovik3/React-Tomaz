@@ -26,6 +26,6 @@ const ItemListContainer = ({greeting}) => {
 
     </Grid>
   );
-};
+}
   
 export default ItemListContainer;

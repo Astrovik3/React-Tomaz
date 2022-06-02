@@ -1,19 +1,26 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/NavBar';
-//import ItemListContainer from './components/ItemListContainer';
+import Home from './screens/Home';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import MenScreen from './screens/MenScreen';
+import WomenScreen from './screens/WomenScreen';
 
 function App() {
   return (
-    <Grid className="App">
-      <NavBar />
-      <ItemDetailContainer />
-    </Grid>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/MenScreen" element={<MenScreen/>} />
+        <Route path="/MenScreen/:id" element={<ItemDetailContainer/>} />
+        <Route path="/WomenScreen" element={<WomenScreen/>} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-/*<ItemListContainer greeting={"NUESTROS PRODUCTOS"}/>*/
+/* <Route exact path='/' component={Home} /> */
+
 
 export default App;

@@ -1,11 +1,15 @@
 import React from "react";
 import { Grid } from "@mui/material";
+import NavBar from "../components/NavBar";
+import ItemListContainer from "../components/ItemListContainer";
+
 
 const MenScreen = () => {
 
   return (
-    <Grid>
-      DESARROLLAR MEN...
+    <Grid className="App">
+      <NavBar />
+      <ItemListContainer greeting={'NUESTROS PRODUCTOS'} />
     </Grid>
   );
 };
