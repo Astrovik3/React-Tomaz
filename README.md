@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+###### DESCRIPCIÓN DEL CIRCUITO
+El logo y la opción HOME en el NavBar te dirigen al screen HOME. 
+La opción MEN en el NavBar te dirige a la categoría de productos masculina.
+La opción WOMEN en el NavBar te dirige a la categoría de productos femenina.
+Hacer click en la imagen del producto dentro de las 2 categorías te lleva a un screen propio del producto.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
