@@ -9,10 +9,11 @@ import WomenScreen from './screens/WomenScreen';
 function App() {
   return (
     <BrowserRouter>
+      
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/MenScreen" element={<MenScreen/>} />
-        <Route path="/MenScreen/:id" element={<ItemDetailContainer/>} />
+        <Route path="/item/:ids" element={<ItemDetailContainer/>} />
         <Route path="/WomenScreen" element={<WomenScreen/>} />
 
       </Routes>

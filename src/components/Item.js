@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Item = ({ids, name, price, photo}) => {
   
@@ -8,7 +9,11 @@ const Item = ({ids, name, price, photo}) => {
       <p>{ids}</p>
       <p>{name}</p>
       <p>{price}</p>
-      <img id="fotoSola" src={photo} alt="si"></img>
+      <div>
+        <Link className='links' to={`/item/${ids}`}>
+          <img id="fotoSola" src={photo} alt="si" />
+        </Link>
+      </div>
 
     </Grid>
   );
