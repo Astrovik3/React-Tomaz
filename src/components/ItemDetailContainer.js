@@ -3,6 +3,7 @@ import { Grid } from '@mui/material';
 import customFetch from '../utils/customFetch';
 import ItemDetail from './ItemDetail';
 import { useParams } from "react-router-dom";
+import NavBar from "./NavBar";
 
 const {products} = require('../utils/products');
 
@@ -18,6 +19,7 @@ const ItemDetailContainer = () => {
 
   return (
     <Grid>
+      <NavBar />
       <ItemDetail item={dato} />
     </Grid>
   );

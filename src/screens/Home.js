@@ -7,6 +7,7 @@ function Home() {
     <Grid className="App">
       <NavBar />
       <p id='itemListContainer'> ... BUILDING HOME ... </p>
+      <p id='itemListContainer'> ... PÁGINA PRINCIPAL - HOME ... </p>
     </Grid>
   );
 }

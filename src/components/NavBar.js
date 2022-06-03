@@ -17,11 +17,11 @@ const NavBar = () => {
             <Link className='links' to={"/"}> home </Link>
           </li>
           <li>
-            <Link className='links' to={"/MenScreen"}> men </Link>
+            <Link className='links' to={"/categoria/male"}> men </Link>
           </li>
           
           <li>
-            <Link className='links' to={"/WomenScreen"}> women </Link>
+            <Link className='links' to={"/categoria/female"}> women </Link>
           </li>
           <li>accessories</li>
           <li>search</li>

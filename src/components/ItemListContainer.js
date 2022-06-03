@@ -3,27 +3,32 @@ import { Grid } from '@mui/material';
 import ItemCount from './ItemCount';
 import customFetch from '../utils/customFetch';
 import ItemList from './ItemList';
+import NavBar from "../components/NavBar";
+import { useParams } from "react-router-dom";
 
 const {products} = require('../utils/products');
 
 const ItemListContainer = ({greeting}) => {
   const [datos, setDatos] = useState([]);
+  const {category} = useParams();
 
   useEffect(() => {
-    customFetch(2000, products)
+    customFetch(2000, products.filter(item => item.category === category))
       .then(result => setDatos(result))
       .catch(err => console.log(err))
-  }, []);
+  }, [category]);
 
   return (
-    <Grid id='itemListContainer'>
-      <p>
-        {greeting}
-      </p>
-      <br />
-      <ItemList items={datos} />
-      <ItemCount stock={8} initial={0}/>
-
+    <Grid className="App">
+      <Grid id='itemListContainer'>
+        <NavBar />
+        <p>
+          {greeting}
+        </p>
+        <br />
+        <ItemList items={datos} />
+        <ItemCount stock={8} initial={0}/>
+      </Grid>
     </Grid>
   );
 }

@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './screens/Home';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import MenScreen from './screens/MenScreen';
-import WomenScreen from './screens/WomenScreen';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -12,9 +11,8 @@ function App() {
       
       <Routes>
         <Route exact path="/" element={<Home/>} />
-        <Route path="/MenScreen" element={<MenScreen/>} />
+        <Route path="/categoria/:category" element={<ItemListContainer greeting={"NUESTROS PRODUCTOS"}/>} />
         <Route path="/item/:ids" element={<ItemDetailContainer/>} />
-        <Route path="/WomenScreen" element={<WomenScreen/>} />
 
       </Routes>
     </BrowserRouter>
