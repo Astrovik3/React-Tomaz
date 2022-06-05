@@ -1,10 +1,16 @@
-import React from "react";
+import { React, useState } from "react";
 import { Grid } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import ItemCount from './ItemCount';
+import ItemCart from "./ItemCart";
 
 const ItemDetail = ({item}) => {
+  const [ itemCount, setItemCount ] = useState(0);
+
+  const onAdd = (qty) => {
+    setItemCount(qty);
+  }
 
   return (
     <Grid>
@@ -16,11 +22,17 @@ const ItemDetail = ({item}) => {
             <img src={item.photo} alt='itemDetail' />
           </Grid>
           <Grid>
-          <p>{item.name}</p>
-          <p>{item.ids}</p>
-          <p>{item.price}</p>
-          
-          <ItemCount stock={item.stock} initial={1}/>
+            <p>{item.name}</p>
+            <p>{item.ids}</p>
+            <p>{item.price}</p>
+            
+            <Grid>
+              {
+              itemCount === 0
+              ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
+              : <ItemCart />
+              }
+            </Grid>
           </Grid>
         </Grid>
         : <Box sx={{ display: 'flex', justifyContent: 'center', margin: '80px'}}>

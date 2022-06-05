@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Grid } from '@mui/material';
-import ItemCount from './ItemCount';
 import customFetch from '../utils/customFetch';
 import ItemList from './ItemList';
 import NavBar from "../components/NavBar";
@@ -27,7 +26,6 @@ const ItemListContainer = ({greeting}) => {
         </p>
         <br />
         <ItemList items={datos} />
-        <ItemCount stock={8} initial={0}/>
       </Grid>
     </Grid>
   );

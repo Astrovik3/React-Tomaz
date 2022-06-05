@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './screens/Home';
+import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" element={<Home/>} />
         <Route path="/categoria/:category" element={<ItemListContainer greeting={"NUESTROS PRODUCTOS"}/>} />
         <Route path="/item/:ids" element={<ItemDetailContainer/>} />
+        <Route path="/cart" element={<Cart/>} />
 
       </Routes>
     </BrowserRouter>

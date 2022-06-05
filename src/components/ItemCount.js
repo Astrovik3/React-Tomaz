@@ -3,7 +3,7 @@ import { Grid, Button } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
   const [quantity, setQuantity] = useState(1);
 
   const restar = () => {
