@@ -27,8 +27,11 @@ const NavBar = () => {
           <li>search</li>
         </ul>
 
+        
         <Grid id='cartWidget'>
-          <CartWidget />
+          <Link className='links' to={"/cart"}>
+            <CartWidget />
+          </Link>
         </Grid>
 
       </Grid>

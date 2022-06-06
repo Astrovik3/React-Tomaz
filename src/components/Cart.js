@@ -1,11 +1,13 @@
 import React from "react";
 import { Grid } from '@mui/material';
+import NavBar from "./NavBar";
 
 const Cart = () => {
 
   return (
     <Grid>
-      <p> CART </p>
+      <NavBar/>
+      <p style={{marginTop: '80px'}}> CART </p>
     </Grid>
   );
 };
