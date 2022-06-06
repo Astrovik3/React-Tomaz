@@ -22,7 +22,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
       <RemoveIcon class='addRemoveIcon' onClick={restar} />
       <p id="itemCountQuantity">{quantity}</p>
       <AddIcon class='addRemoveIcon' onClick={sumar} />
-      <Button id='bttnAgregar' variant="outlined" size="small">agregar al carrito</Button>
+      <Button id='bttnAgregar' variant="outlined" size="small" onClick={() => onAdd(quantity)}>agregar al carrito</Button>
     </Grid>
   );
 };

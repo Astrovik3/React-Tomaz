@@ -6,7 +6,7 @@ import ItemCount from './ItemCount';
 import ItemCart from "./ItemCart";
 
 const ItemDetail = ({item}) => {
-  const [ itemCount, setItemCount ] = useState(0);
+  const [ itemCounter, setItemCount ] = useState(0);
 
   const onAdd = (qty) => {
     setItemCount(qty);
@@ -28,9 +28,9 @@ const ItemDetail = ({item}) => {
             
             <Grid>
               {
-              itemCount === 0
-              ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
-              : <ItemCart />
+                itemCounter === 0
+                  ? <ItemCount stock={item.stock} initial={itemCounter} onAdd={onAdd}/>
+                  : <ItemCart />
               }
             </Grid>
           </Grid>
