@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Grid } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import ItemCount from './ItemCount';
 import ItemCart from "./ItemCart";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({item}) => {
   const [ itemCount, setItemCount ] = useState(0);
 
+  const addNewItem = useContext(CartContext);
+
   const onAdd = (qty) => {
     setItemCount(qty);
+    addNewItem.addItem(item, qty);
   }
 
   return (
