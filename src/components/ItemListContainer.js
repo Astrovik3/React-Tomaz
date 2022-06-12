@@ -4,7 +4,6 @@ import customFetch from '../utils/customFetch';
 import ItemList from './ItemList';
 import NavBar from "../components/NavBar";
 import { useParams } from "react-router-dom";
-import ItemCount from "./ItemCount";
 
 const {products} = require('../utils/products');
 
@@ -27,7 +26,6 @@ const ItemListContainer = ({greeting}) => {
         </p>
         <br />
         <ItemList items={datos} />
-        <ItemCount stock={0} initial={0}/>
       </Grid>
     </Grid>
   );

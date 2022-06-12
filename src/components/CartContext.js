@@ -34,9 +34,17 @@ const CartContextProvider = ({children}) => {
     
     return cantPrendas;
   }
+  const precioTotal = () => {
+    var total = 0;
+    var precio = cartList.map((item) => item.price * item.qty);
+
+    total = precio.reduce((a, b) => a + b, 0);
+    
+    return total;
+  }
 
   return(
-    <CartContext.Provider value={{cartList, addItem, removeItem, clear, cantProds}}>
+    <CartContext.Provider value={{cartList, addItem, removeItem, clear, cantProds, precioTotal}}>
       {children}
     </CartContext.Provider>
   );

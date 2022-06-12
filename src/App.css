@@ -118,6 +118,7 @@ p{
 
 #itemListContainer{
   margin-top: 80px;
+  margin-bottom: 40px;
   padding: 0px;
 }
 
@@ -158,6 +159,7 @@ p{
   background-color: rgb(216, 216, 216);
   grid-template-columns: 1fr 2fr 1fr;
   width: 80%;
+  margin-top: 0px;
   margin-left: 10%;
   margin-bottom: 20px;
 }
