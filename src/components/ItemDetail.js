@@ -27,7 +27,7 @@ const ItemDetail = ({item}) => {
           </Grid>
           <Grid>
             <p>{item.name}</p>
-            <p>{item.ids}</p>
+            <p>{item.id}</p>
             <p>{item.price}</p>
             
             <Grid>

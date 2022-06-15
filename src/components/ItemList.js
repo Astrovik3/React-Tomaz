@@ -10,7 +10,7 @@ const ItemList = ({items}) => {
     <Grid id='gridProductos'>
       {
         items.length > 0
-        ? items.map(item => <Item ids={item.ids} name={item.name} price={item.price} photo={item.photo}/> )
+        ? items.map(item => <Item id={item.id} name={item.name} price={item.price} photo={item.photo}/> )
         : <Box sx={{ display: 'flex', justifyContent: 'center'}}>
             <CircularProgress color='secondary' />
           </Box>
