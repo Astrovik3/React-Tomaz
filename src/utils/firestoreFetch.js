@@ -2,13 +2,13 @@ import { query, orderBy, where, collection, getDocs } from '@firebase/firestore'
 import { doc, getDoc } from 'firebase/firestore';
 import db from './firebaseConfig';
 
-export const firestoreFetch = async (idCategory) => {
+export const firestoreFetch = async (category) => {
     let q;
     
     //cuando llega el idCategory entra en el else porque es UNDEFINED...
 
-    if(idCategory) {
-      q = query(collection(db, 'products'), where('category', '==', idCategory));
+    if(category) {
+      q = query(collection(db, 'products'), where('category', '==', category));
     } else {
       q = query(collection(db, 'products'), orderBy('name'));
     }

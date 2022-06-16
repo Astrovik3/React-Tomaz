@@ -2,15 +2,15 @@ import React from "react";
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-const Item = ({ids, name, price, photo}) => {
+const Item = ({idItem, name, price, photo}) => {
   
   return (
     <Grid id='itemSolo'>
-      <p>{ids}</p>
+      <p>{idItem}</p>
       <p>{name}</p>
       <p>{price}</p>
       <div>
-        <Link className='links' to={`/item/${ids}`}>
+        <Link className='links' to={`/item/${idItem}`}>
           <img id="fotoSola" src={photo} alt="si" />
         </Link>
       </div>

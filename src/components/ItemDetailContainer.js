@@ -11,19 +11,11 @@ const ItemDetailContainer = () => {
   const {idItem} = useParams();
 
   useEffect(() => {
-    //acá me debe dar UNDEFINED también...
-    console.log(idItem);
-
     firestoreFetchOne(idItem)
       .then(result => setDatos(result))
       .catch(err => console.log(err))
   }, [idItem]);
 
-  useEffect(() => {
-    return(() => {
-      setDatos([]);
-    });
-  }, []);
 
   
   /*useEffect(() => {

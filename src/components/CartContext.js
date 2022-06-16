@@ -8,7 +8,7 @@ const CartContextProvider = ({children}) => {
   const cartListVar = [...cartList];
 
   const addItem = (item, qty) => {
-    const indexProd = cartListVar.findIndex((prod) => prod.ids === item.ids);
+    const indexProd = cartListVar.findIndex((prod) => prod.idItem === item.idItem);
 
     if(indexProd !== -1) {
       cartListVar[indexProd].qty = cartListVar[indexProd].qty + qty
@@ -20,8 +20,8 @@ const CartContextProvider = ({children}) => {
 
     //setCartList([...cartList, item]);
   }
-  const removeItem = (ids) => {
-    setCartList([...cartList.filter(prod => prod.ids !== ids)]);
+  const removeItem = (idItem) => {
+    setCartList([...cartList.filter(prod => prod.idItem !== idItem)]);
   }
   const clear = () => {
     setCartList([]);

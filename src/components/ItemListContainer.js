@@ -8,16 +8,13 @@ import { firestoreFetch } from "../utils/firestoreFetch";
 
 const ItemListContainer = ({greeting}) => {
   const [datos, setDatos] = useState([]); 
-  const {idCategory} = useParams();
+  const {category} = useParams();
 
   useEffect(() => {
-    //desde acá me da UNDEFINED...
-    console.log(idCategory);
-    
-    firestoreFetch(idCategory)
+    firestoreFetch(category)
       .then(result => setDatos(result))
       .catch(err => console.log(err))
-  }, [idCategory]);
+  }, [category]);
 
   useEffect(() => {
     return(() => {

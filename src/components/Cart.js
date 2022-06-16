@@ -37,12 +37,12 @@ const Cart = () => {
             </Grid>
             <Grid>
               <p id="cartProducto">{item.name}</p>
-              <p>id producto: {item.ids}</p>
+              <p>id producto: {item.idItem}</p>
               <p>cantidad: {item.qty}</p>
               <p style={{fontSize: 'large', fontWeight: 'bold'}}>${item.price}</p>
             </Grid>
             <Grid>
-              <Button id='bttnEliminar' variant="outlined" color="error" size="small" onClick={() => test.removeItem(item.ids)}>eliminar item</Button>
+              <Button id='bttnEliminar' variant="outlined" color="error" size="small" onClick={() => test.removeItem(item.idItem)}>eliminar item</Button>
             </Grid>
           </Grid>)
       }
