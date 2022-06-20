@@ -2,14 +2,56 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button, Grid } from '@mui/material';
 import { CartContext } from "./CartContext";
+import { collection, serverTimestamp, setDoc, doc, updateDoc, increment } from 'firebase/firestore';
+import db from "../utils/firebaseConfig";
 import NavBar from "./NavBar";
 
 const Cart = () => {
-    const test = useContext(CartContext);
+  const test = useContext(CartContext);
 
-    //var precio = 0;
-    //var total = test.cartList.map((item) => precio = precio + (parseInt(item.price) * item.qty));
+  //var precio = 0;
+  //var total = test.cartList.map((item) => precio = precio + (parseInt(item.price) * item.qty));
 
+  const loadOrder = () => {
+    let itemsOrder = test.cartList.map(item => ({
+      id: item.idItem,
+      price: item.price,
+      title: item.name,
+      qty: item.qty
+    }))
+    let order = {
+      buyer: {
+        email: 'victor.tomaz@email.com',
+        name: 'Victor Tomaz',
+        phone: '1123984574'
+      },
+      date: serverTimestamp(),
+      total: test.precioTotal(),
+      item: itemsOrder
+
+    }
+    console.log(order);
+
+    const createOrderFirestone = async () => {
+      const newOrderRef = doc(collection(db, 'orders'));
+      await setDoc(newOrderRef, order);
+      return newOrderRef;
+    }
+    createOrderFirestone()
+      .then(result => alert('Your ID order is: ' + result.id))
+      .catch(error => console.log(error))
+
+    test.cartList.forEach(async (item) => {
+      const itemRef = doc(db, 'products', item.idItem);
+      await updateDoc(itemRef, {
+        stock: increment(-item.qty)
+      })
+    });
+
+    test.clear();
+    
+  }
+  
   return (
     <Grid>
       <NavBar />
@@ -46,8 +88,9 @@ const Cart = () => {
             </Grid>
           </Grid>)
       }
-      <Grid style={{display: 'flex', justifyContent: 'right', marginRight: '50px'}}>
-        <p>TOTAL: ${test.precioTotal()}</p>
+      <Grid style={{display: 'flex', height: '40px', justifyContent: 'right', marginRight: '50px'}}>
+        <p style={{marginRight: '25px'}}>TOTAL: ${test.precioTotal()}</p> 
+        <Button variant="contained" color="primary" size="small" onClick={loadOrder}>comprar</Button>
       </Grid>
     </Grid>
   );
